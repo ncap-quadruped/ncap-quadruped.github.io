@@ -1,0 +1,272 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Quadruped NCAP, a biologically inspired ANN architecture for quadruped locomotion based on neural circuits in the limbs and spinal cord of mammals.">
+  <meta name="keywords" content="neuroscience, motor control">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9FH2Y89R2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T9FH2Y89R2');
+  </script>
+
+  <!-- Webpage -->
+  <title>Neural Circuit Architectural Priors for Quadruped Locomotion</title>
+  <link rel="icon" href="static/images/favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="static/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="static/js/index.js"></script> -->
+</head>
+
+
+<body>
+
+<!-- Title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Neural Circuit Architectural Priors for Quadruped Locomotion</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/nikhilxb/">Nikhil X. Bhattasali</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://venkyp.com/">Venkatesh Pattabiraman</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://gracewlindsay.com/">Grace W. Lindsay</a>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">New York University</div>
+
+          <div class="column has-text-centered">
+              <!-- Paper Button -->
+              <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Button -->
+              <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Splash -->
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+        <img src="static/images/splash.svg" />
+    </div>
+  </div>
+</section>
+
+
+<!-- Abstract -->
+<section class="section hero abstract is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning-based approaches to quadruped locomotion commonly adopt generic policy architectures like fully connected MLPs. As such architectures contain few inductive biases, it is common in practice to incorporate priors in the form of rewards, training curricula, imitation data, or trajectory generators. In nature, animals are born with priors in the form of their nervous system's architecture, which has been shaped by evolution to confer innate ability and efficient learning. For instance, a horse can walk within hours of birth and can quickly improve with practice. Such architectural priors can also be useful in ANN architectures for AI. In this work, we explore the advantages of a biologically inspired ANN architecture for quadruped locomotion based on neural circuits in the limbs and spinal cord of mammals. Our architecture achieves good initial performance and comparable final performance to MLPs, while using less data and orders of magnitude fewer parameters. Our architecture also exhibits better generalization to task variations, even admitting deployment on a physical robot without standard sim-to-real methods. This work shows that neural circuits can provide valuable architectural priors for locomotion and encourages future work in other sensorimotor skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Videos 1 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title">1. Behavior and Neural Activity</h2>
+        <p>
+          NCAP successfully learns to locomote across various speeds and terrains. These representative videos show the robot on Flat terrain at Walk (0.5 m/s) and Run (1.0 m/s) speeds. We simultanously visualize the Rhythm Generation (RG) neural activity and footfall plots. As brainstem command to RG increases, the expressed gait transitions from walk to bound. Having an achitectural prior thus enables control of the resulting behavior without additional reward/imitation priors.
+        </p>
+      </div>
+      <div class="column is-12" style="text-align: center;">
+        <span class="icon-text has-text-grey">
+          <span class="icon" style="vertical-align: middle; padding-right: 0.75em;">
+            <i class="fas fa-volume-up fa-lg"></i>
+          </span>
+          <span class="is-size-6 has-text-weight-bold" style="vertical-align: middle;">
+            Videos include sound
+          </span>
+        </span>
+      </div>
+      <div class="column is-12">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/1_circuit_walk.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-12">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/1_circuit_run.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Videos 2 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title">2. Simulated Robot</h2>
+      </div>
+
+      <div class="column is-12">
+        Examining the qualitative performance of MLP reveals high variability that is occluded in the quantitative performance curves. MLP develops a good walking gait on seed 3, a mediocre limping gait on seed 2, and a failed on-the-floor shuffle on seed 1.
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_mlp_walk_1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_mlp_walk_2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_mlp_walk_3.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="column is-12">
+        In contrast, NCAP exhibits more naturalistic and consistent gaits due to its RG prior.
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_ncap_walk_1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_ncap_walk_2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-4">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/2_ncap_walk_3.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Videos 3 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title">3. Physical Robot</h2>
+        <p>We deploy the architectures to a physical Unitree A1 quadruped robot. We expect the domain gap to be large since we do not perform controller tuning or system identification with the physical robot, the simulated training does not apply aggressive domain randomization, and the architectures do not have mechanisms for online adaptation.</p>
+      </div>
+
+      <div class="column is-6 is-offset-3">
+        <h3 class="subtitle mb-4">MLP (Trained)</h3>
+        <p class="mb-4">MLP falls immediately due to its erratic and unstable actions, often launching the robot aggressively into the wall.</p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/3_mlp_trained.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="column is-6">
+        <h3 class="subtitle mb-4">NCAP (Untrained)</h3>
+        <p class="mb-4">Even before training, NCAP is stable and produces slight walking movements with small foot displacements.</p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/3_ncap_untrained.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="column is-6">
+        <h3 class="subtitle mb-4">NCAP (Trained)</h3>
+        <p class="mb-4">After training, NCAP walks successfully on most trials, though with less smoothness than in simulation.</p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/3_ncap_trained.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <pre><code>@article{Bhattasali2024QuadrupedNCAP,
+  author   = {Bhattasali, Nikhil X. and Pattabiraman, Venkatesh and Pinto, Lerrel and Lindsay, Grace W.},
+  title    = {Neural Circuit Architectural Priors for Quadruped Locomotion},
+  journal  = {arXiv},
+  year     = {2024},
+}</code></pre>
+      </div>
+      <div class="column is-12">
+        <p>
+          This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
