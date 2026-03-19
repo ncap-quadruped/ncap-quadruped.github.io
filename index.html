@@ -82,12 +82,12 @@
 
               <!-- Code Button -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/nikhilxb/ncap-quadruped"
                     class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (coming soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
           </div>
@@ -130,9 +130,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title">1. Behavior and Neural Activity</h2>
+        <h2 class="title">1. Simulated Body: Fixed Speed</h2>
         <p>
-          NCAP successfully learns to locomote across various speeds and terrains. These representative videos show the robot on Flat terrain at Walk (0.5 m/s) and Run (1.0 m/s) speeds. We simultanously visualize the Rhythm Generation (RG) neural activity and footfall plots. As brainstem command to RG increases, the expressed gait transitions from walk to bound. Having an achitectural prior thus enables control of the resulting behavior without additional reward/imitation priors.
+          NCAP successfully learns to locomote across various speeds and terrains. These representative videos show the robot on Flat terrain at Walk (0.5 m/s) and Run (1.0 m/s) speeds. We simultanously visualize the Rhythm Generation (RG) neural activity and footfall plots. As brainstem command to RG increases, the expressed gait transitions from walk to bound. Having an achitectural prior thus enables control of the resulting behavior without additional reward or imitation priors.
         </p>
       </div>
       <div class="column is-12" style="text-align: center;">
@@ -165,7 +165,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title">2. Simulated Robot</h2>
+        <h2 class="title">2. Simulated Body: Naturalistic Gaits</h2>
       </div>
 
       <div class="column is-12">
@@ -215,7 +215,36 @@
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title">3. Physical Robot</h2>
+        <h2 class="title">3. Simulated Body: Variable Speed</h2>
+        <p>
+          We investigate a more complex task in which the robot must transition between speeds within an episode.
+          NCAP uses the target speed to modulate the brainstem command that controls the RG circuit.
+          This enables it to alter its gait in a speed-dependent manner.
+        </p>
+      </div>
+      <div class="column is-12">
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/3_ncap_variable.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="column is-6 is-offset-3">
+        <h3 class="subtitle mb-4">MLP</h3>
+        <p class="mb-4">MLP learns to alter its speed, but its posture and gait are not naturalistic without additional priors.</p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/3_mlp_variable.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Videos 4 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title">4. Physical Body</h2>
         <p>We deploy the architectures to a physical Unitree A1 quadruped robot. We expect the domain gap to be large since we do not perform controller tuning or system identification with the physical robot, the simulated training does not apply aggressive domain randomization, and the architectures do not have mechanisms for online adaptation.</p>
       </div>
 
@@ -223,7 +252,7 @@
         <h3 class="subtitle mb-4">MLP (Trained)</h3>
         <p class="mb-4">MLP falls immediately due to its erratic and unstable actions, often launching the robot aggressively into the wall.</p>
         <video controls loop playsinline height="100%">
-          <source src="static/videos/3_mlp_trained.mp4" type="video/mp4" />
+          <source src="static/videos/4_mlp_trained.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -231,7 +260,7 @@
         <h3 class="subtitle mb-4">NCAP (Untrained)</h3>
         <p class="mb-4">Even before training, NCAP is stable and produces slight walking movements with small foot displacements.</p>
         <video controls loop playsinline height="100%">
-          <source src="static/videos/3_ncap_untrained.mp4" type="video/mp4" />
+          <source src="static/videos/4_ncap_untrained.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -239,7 +268,7 @@
         <h3 class="subtitle mb-4">NCAP (Trained)</h3>
         <p class="mb-4">After training, NCAP walks successfully on most trials, though with less smoothness than in simulation.</p>
         <video controls loop playsinline height="100%">
-          <source src="static/videos/3_ncap_trained.mp4" type="video/mp4" />
+          <source src="static/videos/4_ncap_trained.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
